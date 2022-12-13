@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  font-size: 12px;
+  overflow: hidden;
+  font-family: arial, sans-serif;
+  color: #444;
+}
+button,
+a,
+input {
+  font: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  outline: inherit;
+  cursor: pointer;
+}
+button {
+  border: 1px solid #d4d4d4;
+  border-radius: 0.2em;
+}
+button,
+.controls select {
+  padding: 0.25em 0.75em;
+  background-color: #fff;
+}
+.canvas-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+}
+canvas {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+.controls {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border-radius: 0.2em;
+  box-shadow: -1px 4px 12px -10px black;
+  padding: 0.75em;
+}
+.controls img {
+  display: none;
+}
+.controls > *:not(:last-child) {
+  margin-right: 1em;
+}
+.controls select {
+  height: 100%;
+  border: 1px solid #d4d4d4;
+  color: #444;
+  border-radius: 0.2em;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 0.2em;
+}

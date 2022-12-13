@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Canvas</title>
+</head>
+<body onload="onInit()">
+
+    <div class="canvas-container">
+        <div class="controls">
+            <input oninput="changeColor(this.value,this.name)" type="color" name="stroke" value="#e64e4e">
+            <input oninput="changeColor(this.value,this.name)" type="color" name="fill" value="#E9E9E9">
+            <select oninput="changeShape(this.value)" name="shape" class="shape-select">
+                <option value="circle">Circle</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="triangle">Triangle</option>
+                <option value="line">Line</option>
+            </select>
+            <button><a href="#" onclick="downloadCanvas(this)" download="my paint">Save</a></button>
+            <button onclick="onShareImg()">Share</button>
+            <button onclick="clearCanvas()">Clear</button>
+        </div>
+        <canvas width="200" height="200"></canvas>
+    </div>
+    <script src="js/canvas.js"></script>
+</body>
+</html>
